@@ -1,17 +1,45 @@
 package pt.ipleiria.estg.dei.ei.esoft;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+public class Main {
+    public static void main(String[] args) {
+        Orcamento orcamento = new Orcamento("Nome Orcamento");
+        Scanner sc = new Scanner(System.in);
+        int opcao;
+
+        do {
+            System.out.println("\n=== ORÇAMENTO DE DESPESAS ===");
+            System.out.println("1. Adicionar despesa");
+            System.out.println("2. Listar todas as despesas");
+            System.out.println("3. Ver totais por categoria");
+            System.out.println("0. Sair");
+            System.out.print("Opção: ");
+            opcao = sc.nextInt();
+
+            switch (opcao) {
+                case 1 -> {
+                    System.out.print("Nome da despesa: ");
+                    String nome = sc.next();
+                    System.out.print("Categoria (OPERACOES/VENDAS/PESSOAL): ");
+                    Categoria cat = Categoria.valueOf(sc.next().toUpperCase());
+                    System.out.print("Orçamento (€): ");
+                    double orc = sc.nextDouble();
+                    System.out.print("Valor real (€): ");
+                    double real = sc.nextDouble();
+
+                    Object categoria = null;
+
+                    orcamento.adicionarDespesa(new Despesa(nome, categoria, orcamento, real));
+                    System.out.println("Despesa adicionada!");
+                }
+                case 2 -> orcamento.listarDespesas();
+                case 3 -> orcamento.totaisPorCategoria();
+                case 0 -> System.out.println("A sair...");
+                default -> System.out.println("Opção inválida!");
+            }
+        } while (opcao != 0);
+
+        sc.close();
     }
 }
