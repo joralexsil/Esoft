@@ -21,4 +21,8 @@ public class Despesa {
     public double getDiferencaPercentagem() {
         return (orcamento != 0) ? (getDiferenca() / orcamento) * 100 : 0;
     }
+
+    public void inserirDespesa(int nome){
+        System.out.println("Despesa inserida com sucesso!");
+    }
 }
