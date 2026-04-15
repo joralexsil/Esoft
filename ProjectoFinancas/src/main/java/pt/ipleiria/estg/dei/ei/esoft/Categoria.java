@@ -15,7 +15,5 @@ public enum Categoria {
     JUROS,
     OUTRO
 
-    //skuuhsuhrgioegrwhr
-    //sdmnviadru
 
 }
