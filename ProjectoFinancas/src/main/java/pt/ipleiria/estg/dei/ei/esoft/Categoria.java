@@ -14,6 +14,4 @@ public enum Categoria {
     SEGUROS,
     JUROS,
     OUTRO
-
-
 }
