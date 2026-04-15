@@ -13,5 +13,6 @@ public enum Categoria {
     PUBLICOS,
     SEGUROS,
     JUROS,
-    OUTRO
+    OUTRO,
+    TESTE
 }
