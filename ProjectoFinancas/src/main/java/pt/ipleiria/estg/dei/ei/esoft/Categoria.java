@@ -14,5 +14,5 @@ public enum Categoria {
     SEGUROS,
     JUROS,
     OUTRO,
-    TESTE
+    TESTE // teste de teste joao m
 }
