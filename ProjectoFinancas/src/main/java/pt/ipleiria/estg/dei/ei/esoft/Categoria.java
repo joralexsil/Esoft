@@ -14,5 +14,6 @@ public enum Categoria {
     SEGUROS,
     JUROS,
     OUTRO,
+    uuu,
     TESTE // teste de teste joao maria
 }
