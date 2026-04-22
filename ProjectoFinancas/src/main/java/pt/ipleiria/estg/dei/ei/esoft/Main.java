@@ -45,6 +45,7 @@ public class Main {
                     novadata = new SeletorDatas(dia, mes, ano);
                     Novadespesa.setData(novadata);
                     gestor.registar(Novadespesa);
+                    idTotal = idTotal + 1;
                 }
                 case 2 -> {
                     gestor.listar();
