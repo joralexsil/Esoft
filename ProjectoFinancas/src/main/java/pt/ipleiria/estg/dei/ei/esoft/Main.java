@@ -16,8 +16,8 @@ public class Main {
             System.out.println("4. Exportar despesas (PDF)");
             System.out.println("0. Sair");
             System.out.print("Opção: ");
-            opcao = sc.nextInt();
 
+            opcao = sc.nextInt();
             switch (opcao) {
                 case 1 -> {
 
