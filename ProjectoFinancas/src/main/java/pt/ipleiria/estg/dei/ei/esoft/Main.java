@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int opcao;
+        int opcao, id = 1;
 
         do {
             System.out.println("\n=== ORÇAMENTO DE DESPESAS ===");
@@ -18,28 +18,38 @@ public class Main {
 
             switch (opcao) {
                 case 1 -> {
-                    System.out.print("Nome da despesa: ");
-                    String nome = sc.next();
-                    System.out.print("Categoria (OPERACOES/VENDAS/PESSOAL): ");
-                    Categoria cat = Categoria.valueOf(sc.next().toUpperCase());
-                    System.out.print("Orçamento (€): ");
-                    double orc = sc.nextDouble();
-                    System.out.print("Valor real (€): ");
-                    double real = sc.nextDouble();
+                    Despesa Novadespesa = new Despesa(id);
+                    SeletorDatas novadata;
+                    int dia,mes,ano;
 
-                    Object categoria = null;
-                    System.out.println("Despesa adicionada!");
+                    System.out.print("Nome da despesa: ");
+                    Novadespesa.descricao = sc.next();
+
+                    System.out.print("Valor(€): ");
+                    Novadespesa.valor = sc.nextDouble();
+
+                    System.out.println("Vamos Inserir a Data!");
+                    System.out.print("Dia: ");
+                    dia = sc.nextInt();
+                    System.out.print("Mes: ");
+                    mes = sc.nextInt();
+                    System.out.print("Ano: ");
+                    ano = sc.nextInt();
+
+                    novadata = new SeletorDatas(dia, mes, ano);
+                    Novadespesa.setData(novadata);
+
+                    GestorDespesa gestor = new GestorDespesa();
+                    gestor.registar(Novadespesa);
                 }
                 case 2 -> {return;}
                 case 3 ->  {return;}
                 case 0 -> System.out.println("A sair...");
                 default -> System.out.println("Opção inválida!");
+                //
             }
         } while (opcao != 0);
 
         sc.close();
     }
 }
-
-// coloquei aqui um comentario
-//coloquei um segundo comentario

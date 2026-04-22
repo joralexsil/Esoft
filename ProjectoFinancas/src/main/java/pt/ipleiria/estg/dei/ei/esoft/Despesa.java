@@ -7,13 +7,13 @@ public class Despesa {
     //int id, valor double, data Date, String descricao
     int id;
     double valor;
-    Date data;
+    SeletorDatas data;
     String descricao;
 
     public Despesa(int id) {
         this.id = id;
         valor = 0;
-        data = new Date();
+        data = new SeletorDatas(0,0,0);
         descricao = "";
     }
 
@@ -22,8 +22,10 @@ public class Despesa {
         this.valor = valor;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setData(SeletorDatas data) {
+        this.data.setAno(data.getAno());
+        this.data.setMes(data.getMes());
+        this.data.setDia(data.getDia());
     }
 
     public void setDescricao(String descricao) {
