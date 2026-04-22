@@ -64,4 +64,13 @@ public class GestorDespesa {
             System.out.println("Não é possível remover a despesa com o id" + id + " porque não existe!");
         }
     }
+
+    public void listar(){
+        //correr
+        //correr a lista e para cada elemento que vai ser uma despesa, escrever printf
+    }
+
+    public void exportarPDF(){
+        //"listar" para um pdf. mas pedir o nome para guardar ficheiros
+    }
 }
