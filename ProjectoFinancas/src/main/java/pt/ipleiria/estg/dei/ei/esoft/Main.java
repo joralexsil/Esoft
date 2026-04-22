@@ -11,7 +11,6 @@ public class Main {
             System.out.println("\n=== ORÇAMENTO DE DESPESAS ===");
             System.out.println("1. Adicionar despesa");
             System.out.println("2. Listar todas as despesas");
-            System.out.println("3. Ver totais por categoria");
             System.out.println("0. Sair");
             System.out.print("Opção: ");
             opcao = sc.nextInt();
