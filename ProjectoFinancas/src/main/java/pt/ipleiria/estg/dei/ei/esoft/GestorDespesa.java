@@ -88,7 +88,7 @@ public class GestorDespesa {
             System.out.println("Despesa com o id: " + d.id);
             System.out.println("Valor: " + d.valor);
             System.out.println("Descricao: " + d.descricao);
-            System.out.println("Data: " + d.data);
+            System.out.println("Data: " + d.data.mostrarData());
             System.out.println("-----------------------------------");
         }
     }
