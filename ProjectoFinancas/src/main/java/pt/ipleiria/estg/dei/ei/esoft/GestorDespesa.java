@@ -1,21 +1,41 @@
 package pt.ipleiria.estg.dei.ei.esoft;
 
+import java.util.LinkedList;
+
 public class GestorDespesa {
+    private LinkedList<Despesa> despesas;
 
-    //vai ter uma linekd list de objetos do tipo Despesa
+    public GestorDespesa() {
+        this.despesas = new LinkedList<>();
+    }
+        //vai ter uma linekd list de objetos do tipo Despesa
 
+    public void registar(Despesa despesa){
 
-    public void registar(){
-        //regista despesa: data, valor e descricao
+        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual nao
+        for(Despesa d :despesas){
+            if(d.id == despesa.id){
+                System.out.println("Erro: Já existe uma despesa registada com o ID " + despesa.id + ".");
+                return;
+            }
+        }
+
+        //resgista se for igual faz add a linked list
+        despesas.add(despesa);
+        System.out.println("Despesa com ID " + despesa.id + " registada com sucesso!");
     }
 
-    public void editar(int id){
-        //edita a despesa
-        //eu vou editar isto
+    public void editar(int id, Despesa despesa){
 
+        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual
+        //subistiur essa despesa por a despesa passada por referencia
     }
 
     public void remover(int id){
+
+        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual  remove
+        // caso contrario manda uma mensagem a dizer que nao existe a despesa a remover.
+
 
     }
 }
