@@ -1,5 +1,13 @@
 package pt.ipleiria.estg.dei.ei.esoft;
 
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.Table;
+
+import java.util.Scanner;
+
 import java.util.LinkedList;
 
 public class GestorDespesa {
@@ -86,6 +94,42 @@ public class GestorDespesa {
     }
 
     public void exportarPDF(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduza o nome do ficheiro (ex: despesas): ");
+        String nomeFicheiro = sc.next() + ".pdf";
+
         //"listar" para um pdf. mas pedir o nome para guardar ficheiros
+        try {
+            // 1. Criar o escritor e o documento PDF
+            PdfWriter writer = new PdfWriter(nomeFicheiro);
+            PdfDocument pdf = new PdfDocument(writer);
+            Document documento = new Document(pdf);
+
+            // 2. Adicionar um título
+            documento.add(new Paragraph("Relatório de Despesas").setBold().setFontSize(18));
+
+            // 3. Criar uma tabela com 4 colunas (ID, Data, Valor, Descrição)
+            float[] columnWidths = {50f, 100f, 100f, 250f};
+            Table tabela = new Table(columnWidths);
+            tabela.addCell("ID");
+            tabela.addCell("Data");
+            tabela.addCell("Valor");
+            tabela.addCell("Descrição");
+
+            // 4. Percorrer a lista e adicionar à tabela
+            for (Despesa d : despesas) {
+                tabela.addCell(String.valueOf(d.id));
+                tabela.addCell(d.data.toString());
+                tabela.addCell(String.format("%.2f€", d.valor));
+                tabela.addCell(d.descricao);
+            }
+            documento.add(tabela);
+            documento.close();
+
+            System.out.println("PDF '" + nomeFicheiro + "' gerado com sucesso!");
+
+        } catch (Exception e) {
+            System.out.println("Erro ao gerar PDF: " + e.getMessage());
+        }
     }
 }
