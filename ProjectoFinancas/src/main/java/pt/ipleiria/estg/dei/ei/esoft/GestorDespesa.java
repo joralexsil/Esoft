@@ -40,11 +40,11 @@ public class GestorDespesa {
         for (Despesa d : despesas) {
             if (d.id == id) {
                 despesaARemover = d;
-                    break;
+                break;
             }
         }
 
-        // caso contrario manda uma mensagem a dizer que nao existe a despesa a remover .
+        // caso contrario manda uma mensagem a dizer que nao existe a despesa a remover.
         if (despesaARemover != null) {
             despesas.remove(despesaARemover);
             System.out.println("Despesa com o id " + id + " removida com sucesso!");
