@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int opcao, idTotal = 1;
+        int opcao, idTotal = 0;
         GestorDespesa gestor = new GestorDespesa();
 
         do {
