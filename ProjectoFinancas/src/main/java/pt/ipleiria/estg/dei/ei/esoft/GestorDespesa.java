@@ -77,11 +77,11 @@ public class GestorDespesa {
         System.out.println("\n ---------------- Lista Despesa ----------------");
 
         for(Despesa d : despesas){
-            System.out.println("\nDespesa com o id: " + d.id);
-            System.out.println("\nValor: " + d.valor);
-            System.out.println("\nDescricao: " + d.descricao);
-            System.out.println("\nData: " + d.data);
-            System.out.println("\n-----------------------------------");
+            System.out.println("Despesa com o id: " + d.id);
+            System.out.println("Valor: " + d.valor);
+            System.out.println("Descricao: " + d.descricao);
+            System.out.println("Data: " + d.data);
+            System.out.println("-----------------------------------");
         }
     }
 
