@@ -17,4 +17,16 @@ public class Despesa {
         descricao = "";
     }
 
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }
