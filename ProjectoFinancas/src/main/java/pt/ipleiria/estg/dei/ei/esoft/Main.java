@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Orcamento orcamento = new Orcamento("Nome Orcamento");
         Scanner sc = new Scanner(System.in);
         int opcao;
 
@@ -29,12 +28,10 @@ public class Main {
                     double real = sc.nextDouble();
 
                     Object categoria = null;
-
-                    orcamento.adicionarDespesa(new Despesa(nome, categoria, orcamento, real));
                     System.out.println("Despesa adicionada!");
                 }
-                case 2 -> orcamento.listarDespesas();
-                case 3 -> orcamento.totaisPorCategoria();
+                case 2 -> {return;}
+                case 3 ->  {return;}
                 case 0 -> System.out.println("A sair...");
                 default -> System.out.println("Opção inválida!");
             }

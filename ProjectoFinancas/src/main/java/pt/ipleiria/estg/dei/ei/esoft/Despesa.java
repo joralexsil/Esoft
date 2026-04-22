@@ -1,29 +1,20 @@
 package pt.ipleiria.estg.dei.ei.esoft;
 
+import java.util.Date;
+
 public class Despesa {
-    private String nome;
-    private Categoria categoria;
-    private double orcamento;
-    private double real;
 
-    // construtor
+    //int id, valor double, data Date, String descricao
+    int id;
+    double valor;
+    Date data;
+    String descricao;
 
-    public Despesa(String nome, Object categoria, Orcamento orcamento, double real) {
-
+    public Despesa(int id) {
+        this.id = id;
+        valor = 0;
+        data = new Date();
+        descricao = "";
     }
 
-    //getters, setters
-
-    public double getDiferenca() {
-        return real - orcamento;
-    }
-
-    public double getDiferencaPercentagem() {
-        return (orcamento != 0) ? (getDiferenca() / orcamento) * 100 : 0;
-    }
-
-    public void inserirDespesa(int nome){
-        System.out.println("Despesa inserida com sucesso!");
-    }
-    //comment
 }
