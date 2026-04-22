@@ -29,27 +29,27 @@ public class GestorDespesa {
 
         //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual
         //subistiur essa despesa por a despesa passada por referencia
-    }
 
-    public void remover(int id) {
+        for(Despesa despesa1 : despesas){
+            if(despesa1.id == id){
+                despesa1.valor = despesa.valor;
+                despesa1.descricao = despesa.descricao;
+                despesa1.data = despesa.data;
 
-        //guardar a despesa caso se encontre
-        Despesa despesaARemover = null;
-
-        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual  remove
-        for (Despesa d : despesas) {
-            if (d.id == id) {
-                despesaARemover = d;
-                break;
+                System.out.println("despesa editad com sucesso");
+                return;
             }
         }
 
+        System.out.println("Despesa nao encontrada");
+
+    }
+
+    public void remover(int id){
+
+        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual  remove
         // caso contrario manda uma mensagem a dizer que nao existe a despesa a remover.
-        if (despesaARemover != null) {
-            despesas.remove(despesaARemover);
-            System.out.println("Despesa com o id " + id + " removida com sucesso!");
-        } else {
-            System.out.println("Não é possível remover a despesa com o id" + id + " porque não existe!");
-        }
+
+
     }
 }
