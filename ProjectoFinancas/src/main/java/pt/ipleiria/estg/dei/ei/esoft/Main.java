@@ -46,6 +46,7 @@ public class Main {
                 case 3 ->  {return;}
                 case 0 -> System.out.println("A sair...");
                 default -> System.out.println("Opção inválida!");
+                //
             }
         } while (opcao != 0);
 
