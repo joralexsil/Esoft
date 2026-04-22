@@ -11,6 +11,8 @@ public class GestorDespesa {
 
     public void editar(int id){
         //edita a despesa
+        //eu vou editar isto
+
     }
 
     public void remover(int id){
