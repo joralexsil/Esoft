@@ -29,6 +29,20 @@ public class GestorDespesa {
 
         //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual
         //subistiur essa despesa por a despesa passada por referencia
+
+        for(Despesa despesa1 : despesas){
+            if(despesa1.id == id){
+                despesa1.valor = despesa.valor;
+                despesa1.descricao = despesa.descricao;
+                despesa1.data = despesa.data;
+
+                System.out.println("despesa editad com sucesso");
+                return;
+            }
+        }
+
+        System.out.println("Despesa nao encontrada");
+
     }
 
     public void remover(int id){
