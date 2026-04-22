@@ -31,7 +31,7 @@ public class GestorDespesa {
     public void remover(int id){
 
         //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual  remove
-        // caso contrario manda uma mensagem a dizer que nao existe a despesa a remover
+        // caso contrario manda uma mensagem a dizer que nao existe a despesa a remover.
 
 
     }
