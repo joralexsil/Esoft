@@ -40,7 +40,6 @@ public class GestorDespesa {
 
         System.out.println("Despesa nao encontrada");
 
-
     }
 
     public void remover(int id){
