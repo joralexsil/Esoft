@@ -8,7 +8,7 @@ public class GestorDespesa {
     public GestorDespesa() {
         this.despesas = new LinkedList<>();
     }
-//vai ter uma linekd list de objetos do tipo Despesa
+        //vai ter uma linekd list de objetos do tipo Despesa
 
     public void registar(Despesa despesa){
         //regista despesa: data, valor e descricao
