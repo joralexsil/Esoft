@@ -40,7 +40,7 @@ public class GestorDespesa {
         for (Despesa d : despesas) {
             if (d.id == id) {
                 despesaARemover = d;
-                break;
+                    break;
             }
         }
 
