@@ -11,7 +11,10 @@ public class GestorDespesa {
         //vai ter uma linekd list de objetos do tipo Despesa
 
     public void registar(Despesa despesa){
-        //regista despesa: data, valor e descricao
+
+        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual nao
+        //resgista se for igual faz add a linked list
+
         int id = despesa.id;
 
 
@@ -19,13 +22,17 @@ public class GestorDespesa {
 
     }
 
-    public void editar(int id){
-        //edita a despesa
-        //eu vou editar isto
+    public void editar(int id, Despesa despesa){
 
+        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual
+        //subistiur essa despesa por a despesa passada por referencia
     }
 
     public void remover(int id){
+
+        //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual  remove
+        // caso contrario manda uma mensagem a dizer que nao existe a despesa a remover
+
 
     }
 }
