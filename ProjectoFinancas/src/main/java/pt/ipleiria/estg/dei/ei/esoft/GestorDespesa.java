@@ -13,13 +13,16 @@ public class GestorDespesa {
     public void registar(Despesa despesa){
 
         //fazer um for ate encontrar uma despesa com o mesmo id da despesa passada por referencia se for igual nao
+        for(Despesa d :despesas){
+            if(d.id == despesa.id){
+                System.out.println("Erro: Já existe uma despesa registada com o ID " + despesa.id + ".");
+                return;
+            }
+        }
+
         //resgista se for igual faz add a linked list
-
-        int id = despesa.id;
-
-
         despesas.add(despesa);
-
+        System.out.println("Despesa com ID " + despesa.id + " registada com sucesso!");
     }
 
     public void editar(int id, Despesa despesa){
