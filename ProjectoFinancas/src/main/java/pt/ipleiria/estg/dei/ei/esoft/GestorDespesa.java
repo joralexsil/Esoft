@@ -68,6 +68,21 @@ public class GestorDespesa {
     public void listar(){
         //correr
         //correr a lista e para cada elemento que vai ser uma despesa, escrever printf
+
+        if(despesas.isEmpty()){
+            System.out.println("Despesa nao encontrada");
+            return;
+        }
+
+        System.out.println("\n ---------------- Lista Despesa ----------------");
+
+        for(Despesa d : despesas){
+            System.out.println("\nDespesa com o id: " + d.id);
+            System.out.println("\nValor: " + d.valor);
+            System.out.println("\nDescricao: " + d.descricao);
+            System.out.println("\nData: " + d.data);
+            System.out.println("\n-----------------------------------");
+        }
     }
 
     public void exportarPDF(){
