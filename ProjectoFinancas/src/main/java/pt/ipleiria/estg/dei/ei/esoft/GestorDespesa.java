@@ -51,5 +51,6 @@ public class GestorDespesa {
         } else {
             System.out.println("Não é possível remover a despesa com o id" + id + " porque não existe!");
         }
+
     }
 }
