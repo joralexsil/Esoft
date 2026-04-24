@@ -119,7 +119,7 @@ public class GestorDespesa {
             // 4. Percorrer a lista e adicionar à tabela
             for (Despesa d : despesas) {
                 tabela.addCell(String.valueOf(d.id));
-                tabela.addCell(d.data.toString());
+                tabela.addCell(d.data.mostrarData());
                 tabela.addCell(String.format("%.2f€", d.valor));
                 tabela.addCell(d.descricao);
             }
